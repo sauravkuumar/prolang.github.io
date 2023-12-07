@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/PROLANG-removebg-preview.png" type="lo.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer saurav</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+*{
+    margin: 0;
+    padding: 0;
+}
+.conatiner2{
+    width: 100%;
+}
+.conatiner2 .wrapper .logo img{
+    width: 10rem;
+    height: auto;
+}
+.wrapper {
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    padding: 0px 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0 0 10px 10px;
+}
+.wrapper .logo img {
+    height: 70px;
+    display: block;
+}
+.container img{
+    width: 300px;
+}
+.wrapper .logo a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 8rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    transition: left 0.3s;
+}
+.wrapper button{
+    border: none;
+    width: 60px;
+    height: 25px;
+    border-radius: 2rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(97, 97, 241);
+}
+.navbar.show {
+    left: 0 !important;
+}
+
+.hide-scroll {
+    overflow: hidden;
+}
+.navbar {
+    display: flex;
+}
+.navbar nav ul{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.navbar ul {
+    all: unset;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.navbar ul a {
+    all: unset;
+    color: rgb(94, 94, 223);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+}
+.navbar ul a:hover {
+    color: #111111;
+    text-decoration: underline overline;
+    text-decoration-thickness: 3px;
+}
+
+.close-nav {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.close-nav button {
+    all: unset;
+    background: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+    color: #444444;
+}
+.close-nav button:hover {
+    color: #222222;
+    background: white;
+}
+
+.menu-bar button {
+    border:none;
+    background: #fff;
+    height: 30px;
+    width: 40px;
+    
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.menu-bar i {
+    display: block;
+    border-top: 3px solid #444444;
+    border-bottom: 3px solid 
+
+#444444;
+}
+.menu-bar i::after {
+    display: block;
+    content: "";
+    border-top: 3px solid #444444;
+    margin: 6px 0;
+}
+.menu-bar button:hover {
+    background: white;
+}
+.menu-bar button:hover i {
+    border-color: #222222;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+@media (min-width: 730px) {
+    .navbar {
+        all: unset;
+        display: block;
+        
+    }
+    .conatiner2 .wrapper .logo a{
+        font-size: 2px;
+    }
+    
+    .container .content1 img{
+        border-radius: 50%;
+        margin-left: 5rem;
+        width: 10px;
+    }
+    .navbar ul {
+        flex-direction: row;
+        gap: 20px;
+        
+    }
+    .navbar ul a {
+        font-size: inherit;
+        
+    }
+    .close-nav,
+    .menu-bar {
+        display: none;
+    }
+    
+}
+
+/*ndafk sbdfkjag shfahfhasfna bsjkf*/
+.container{
+    display: flex;
+    
+}
+
+.container .content1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .content1 img{
+    border-radius: 50%;
+    margin-left: 1rem;
+    width: 25rem;
+}
+.container .content1 .text{
+    font-family: 'Courier New', Courier, monospace;
+}
+.container .content1 .text h1{
+    font-size: 3rem;
+}
+.container .content1 .text h2{
+    font-size: 1.5rem;
+}
+.container .content1 .text button{
+    margin-top: 1rem;
+    width: 150px;
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    border-color: #99cff4;
+}
+.container .content1 .text button:hover{
+    transition: 0.5s;
+    background-color: rgb(72, 72, 228);
+    border: #99cff4;
+    color: white;
+}
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 90%;
+    left: 15%;
+    border-radius: 0 10px 10px 10px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(1, 1, 1);
+    padding: 20px;
+    color: #ccc;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    width: 200px;
+    
+  }
+  
+  .popup {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    .popup-container {
+        display: flex;
+        position: fixed;
+        top: 90%;
+        left: 35%;
+        border-radius: 0px 5px 5px 5px;
+        transform: translate(-50%, -50%);
+        background-color: rgb(1, 1, 1);
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        width: 205px;
+        color: #ccc;
+        font-size: 1rem;
+      }
+      .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container .content1{
+        display: table-column;
+        align-items: center;
+        justify-content: center;
+      }
+      .container .content1 img{
+        margin-top: 1rem;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container .content1 .text h1{
+        font-size: 1.7rem;
+    }
+    .container .content1 .text h2{
+        font-size: 0.7rem;
+    }
+      .popup-container h2{
+        display: flex;
+        font-size: 15px;
+      }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .footer{
+        background-color: rgba(138, 140, 141, 0.422);
+        height: 20rem;
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.footer{
+    background-color: rgba(138, 140, 141, 0.422);
+    height: auto;
+    margin-top: 1.5rem;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer button{
+    margin-top: 0.5rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+.footer h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+.footer h3{
+    margin-top: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.footer .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .image p{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer img{
+    margin-top: 1rem;
+    width: 40px;
+    display: flex;
+    justify-content: space-between;
+    filter: contrast(0.5);
+    color: #000000;
+    margin-left: 1rem;
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+</style>
+<body>
+   
+        <div class="conatiner2">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#"><img src="images/PROLANG-removebg-preview.png" alt="dev-saurav"> </a>
+            </div>
+            
+            <div class="navbar">
+                <div class="close-nav"><button>×</button></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fullsttack.html">Web Designing</a></li>
+                        <li><a href="weball.html">Webinar</a></li>
+                        <li><a href="team.html">Team Members</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="menu-bar">
+                <button><i></i></button>
+            </div>
+        </div>
+    </div>
+    <style>
+        
+    </style>
+
+    <!--------------------CENTER--------------->
+    <style>
+        .container a{
+            text-decoration: none;
+        }
+        
+    </style>
+
+
+<div class="heading">
+    <h3>WEBSITE DESIGN</h3>
+</div>
+
+<div class="teammember">
+    <div class="box">
+        <img src="https://img.freepik.com/free-psd/landing-page-online-fashion-sale_23-2148585401.jpg">
+        <h2>Shoping Website</h2>
+    </div>
+    <div class="box">
+        <img src="https://lvivity.com/wp-content/uploads/2019/10/website-for-app.jpg">
+        <h2>Web-App Website</h2>
+    </div>
+    <div class="box">
+        <img src="https://d85wutc1n854v.cloudfront.net/live/products/icons/WB0048JF7.jpg?v=3.0.1">
+        <h2>Admin Panel</h2>
+    </div>
+    <div class="box">
+        <img src="https://www.hostgator.com/blog/wp-content/uploads/2019/03/How-to-Edit-Your-Website-Photos-1.png">
+        <h2>Editing Website</h2>
+    </div>
+    <div class="box">
+        <img src="https://img.freepik.com/free-vector/flat-design-wedding-celebration-landing-page_23-2150426832.jpg">
+        <h2>Wedding Website</h2>
+    </div>
+    <div class="box">
+        <img src="https://www.probytes.net/wp-content/uploads/2019/09/makemytrip-Hotel-Booking-Sites.jpg">
+        <h2>Make My Website</h2>
+    </div>
+    <div class="box">
+        <img src="https://www.researchgate.net/publication/351574981/figure/fig1/AS:1023236699598848@1620970048104/The-Netflix-homepage-an-example-of-carousel-user-interface-in-the-multimedia-streaming.jpg">
+        <h2>Netflix Website</h2>
+    </div>
+    <div class="box">
+        <img src="https://themesvillage.com/wp-content/uploads/2020/11/Screenshot-2020-11-20-100407.png">
+        <h2>News Website</h2>
+    </div>
+</div>
+
+
+
+<div class="heading">
+    <h3>APPLICATION DESIGN</h3>
+</div>
+
+<div class="teammember">
+    <div class="box">
+        <img src="https://i.pinimg.com/736x/2a/a4/19/2aa419ecd4c73abdcb0e1702c7e171a5.jpg">
+        <h2>Instagram App</h2>
+    </div>
+    <div class="box">
+        <img src="data:image/jpeg;base64,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">
+        <h2>Watsapp App</h2>
+    </div>
+    <div class="box">
+        <img src="https://cdn.dribbble.com/users/3776884/screenshots/16730164/media/423e2ab4de2e7bf3b2e9c0334f33b5a5.png">
+        <h2>Thread App</h2>
+    </div>
+    <div class="box">
+        <img src="https://assets.materialup.com/uploads/3bcaf242-04d3-4961-92e7-bf16ea0b6e3f/preview.png">
+        <h2>Linkedin App</h2>
+    </div>
+    
+</div>
+<style>
+    .heading h3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 2rem;
+        margin-top: 1rem;
+
+    }
+    .teammember{
+        display: flex;
+        flex-wrap: wrap;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .teammember .box h2{
+        display: flex;
+    }
+    .teammember .box{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        width: 15rem;
+        height: 12rem;
+        margin-top: 0.5rem;
+        border: 1px solid black;
+        border-radius: 1rem;
+    }
+    .teammember .box{
+        box-shadow: 1px 5px 8px 5px rgb(34, 34, 44);
+    }
+    .teammember .box img{
+        width: 200px;
+        
+        
+    }
+    .teammember .box .container img{
+        width: 25px;
+        border-radius: 0%;
+        filter: contrast(10%);
+    }
+@media screen and (max-width: 768px) {
+    .teammember .box img{
+        width: 200px;
+        
+    }
+    .teammember .box{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        width: 15rem;
+        height: 18rem;
+        margin-top: 1.5rem;
+        border: 1px solid black;
+        border-radius: 1rem;
+    }
+}
+</style>
+<!-------courses ended------>
+<div class="footer">
+    <div class="image">
+
+    <a href="https://www.instagram.com/pro_lang.in/?hl=en"><img src="https://dz8fbjd9gwp2s.cloudfront.net/orgData/64e08dd8e4b03f0cb2dc89f0/pages/assets/images/7PASNimage5.png"><p>Instagram</p> </a>
+    <a href="https://www.youtube.com/@codetodream"><img src="https://dz8fbjd9gwp2s.cloudfront.net/orgData/64e08dd8e4b03f0cb2dc89f0/pages/assets/images/gMYrUimage5.png"><p>Youtube</p></a>
+</div>
+    
+    <h2>PRO-LANG &#169; 2023</h2> 
+    <h2><a href=""> •Privacy policy </a>&nbsp;
+        <a href=""> •Terms of use </a>&nbsp;
+        <a href=""> •Contact us</a>&nbsp;
+        <a href=""> •Refund policy</a></h2> 
+</div>
+<script>
+    const theBody = document.querySelector('body');
+const openNav = document.querySelector('.menu-bar button');
+const closeNav = document.querySelector('.close-nav button');
+const Navbar = document.querySelector('.navbar');
+
+// Hiding body scroll when mobile navigation menu opens
+function bodyScroll() {
+    if (Navbar.classList.contains('show')) {
+        theBody.classList.add('hide-scroll');
+    } else if (theBody.classList.contains('hide-scroll')) {
+        theBody.classList.remove('hide-scroll');
+    }
+}
+
+function showHide() {
+    Navbar.classList.toggle('show');
+    bodyScroll();
+}
+
+openNav.onclick = showHide;
+closeNav.onclick = showHide;
+</script>
+
+</body>
+</html>

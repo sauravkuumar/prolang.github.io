@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/PROLANG-removebg-preview.png" type="lo.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer saurav</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="me" href="https://www.blogger.com/profile/18241178981162942797" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8389120514271140&host=ca-host-pub-1556223355139109" crossorigin="anonymous"></script>
+
+<!-- data-ad-client=ca-pub-8389120514271140 -->
+</head>
+<style>
+    
+*{
+    margin: 0;
+    padding: 0;
+}
+.conatiner2{
+    width: 100%;
+}
+.wrapper {
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    padding: 0px 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0 0 10px 10px;
+}
+.wrapper .logo img {
+    height: 70px;
+    display: block;
+}
+.wrapper .logo a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    transition: left 0.3s;
+}
+ .wrapper .login-btn{
+    width: 70px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(97, 97, 241);
+}
+.navbar.show {
+    left: 0 !important;
+}
+
+.hide-scroll {
+    overflow: hidden;
+}
+.navbar {
+    display: flex;
+}
+.navbar nav ul{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.navbar ul {
+    all: unset;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.navbar ul a {
+    all: unset;
+    color: rgb(94, 94, 223);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+}
+.navbar ul a:hover {
+    color: #111111;
+    text-decoration: underline overline;
+    text-decoration-thickness: 3px;
+}
+
+.close-nav {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.close-nav button {
+    all: unset;
+    background: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+    color: #444444;
+}
+.close-nav button:hover {
+    color: #222222;
+    background: white;
+}
+
+.menu-bar button {
+    border:none;
+    background: #fff;
+    height: 30px;
+    width: 40px;
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.menu-bar i {
+    display: block;
+    border-top: 3px solid #444444;
+    border-bottom: 3px solid #444444;
+}
+.menu-bar i::after {
+    display: block;
+    content: "";
+    border-top: 3px solid #444444;
+    margin: 6px 0;
+}
+.menu-bar button:hover {
+    background: white;
+}
+.menu-bar button:hover i {
+    border-color: #222222;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+@media (min-width: 730px) {
+    .navbar {
+        all: unset;
+        display: block;
+        
+    }
+    .conatiner2 .wrapper .logo a{
+        font-size: 2px;
+    }
+    
+    .container .content1 img{
+        border-radius: 50%;
+        margin-left: 5rem;
+        width: 10px;
+    }
+    .navbar ul {
+        flex-direction: row;
+        gap: 20px;
+        
+    }
+    .navbar ul a {
+        font-size: inherit;
+        
+    }
+    .close-nav,
+    .menu-bar {
+        display: none;
+    }
+    
+}
+
+/*ndafk sbdfkjag shfahfhasfna bsjkf*/
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 90%;
+    left: 15%;
+    border-radius: 0 10px 10px 10px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(1, 1, 1);
+    padding: 20px;
+    color: #ccc;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    width: 200px;
+    
+  }
+  
+  .popup {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    .popup-container {
+        display: flex;
+        position: fixed;
+        top: 90%;
+        left: 35%;
+        border-radius: 0px 5px 5px 5px;
+        transform: translate(-50%, -50%);
+        background-color: rgb(1, 1, 1);
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        width: 205px;
+        color: #ccc;
+        font-size: 1rem;
+      }
+      .popup-container h2{
+        display: flex;
+        font-size: 15px;
+      }
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        background-color: rgba(138, 140, 141, 0.422);
+        height: 20rem;
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.footer{
+    background-color: rgba(138, 140, 141, 0.422);
+    height: 15.5rem;
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer button{
+    margin-top: 0.5rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+.footer h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+.footer h3{
+    margin-top: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.footer .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .image p{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer img{
+    width: 40px;
+    display: flex;
+    justify-content: space-between;
+    filter: contrast(0.5);
+    color: #000000;
+    margin-left: 1rem;
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+</style>
+<style>
+        
+    .popup2 .buttons{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .popup2 .buttons a{
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup2 {
+        display: none;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width: 20rem;
+        height: auto;
+    }
+    .popup2  .google{
+        margin-top: 1rem;
+        color: white;
+        background-color: #000000;
+        border: none;
+        height: 2rem;
+        width: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup2  .google img{
+        width: 25px;
+    }
+    .popup2  .email img{
+        width: 25px;
+    }
+    .popup2  .email{
+        margin-top: 1rem;
+        color: white;
+        background-color: rgb(91, 91, 236);
+        border: none;
+        height: 2rem;
+        width: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup2 button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        
+    }
+
+    .login-btn {
+        padding: 10px 20px;
+        background-color: #3498db;
+        
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<body>
+   
+        <div class="conatiner2">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="index.html"><img src="images/PROLANG-removebg-preview.png" alt="dev-saurav"> </a>
+            </div>
+            
+            <div class="navbar">
+                <div class="close-nav"><button>×</button></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="weball.html">Webinar</a></li>
+                        <li><a href="#">Digital Products</a></li>
+                        <li><a href="#">Membership</a></li>
+
+                    </ul>
+                </nav>
+                
+            </div>
+            <button class="login-btn" onclick="openpopup2()">Login</button>
+            <div class="menu-bar">
+                <button><i></i></button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <style>
+        
+    </style>
+    <div class="popup-container" id="popupContainer">
+        <div class="popup" id="popup"> 
+          <!-- Pop-up content goes here -->
+        </div>
+      </div>
+    
+      <script src="script1.js"></script>
+    <!--------------------CENTER--------------->
+    
+    <script src="script.js"></script>
+      
+<div id="loginpopup2" class="popup2">
+    <span class="close-btn" onclick="closepopup2()">X</span>
+    <div class="buttons">
+    <h2>Login To Developer Saurav</h2>
+    <button onclick="signUpWithGoogle()" class="google"><a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=https%3A%2F%2Fauthenticate.ongraphy.com%2Ft%2Fpublic%2Fgoogle%2Fredirect&response_type=code%20id_token&scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&client_id=771122676243-cb11avd40vp8p9mblpks64a2efll2jou.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fauthenticate.ongraphy.com&fetch_basic_profile=true&gsiwebsdk=2&flowName=GeneralOAuthFlow&prompt=select_account&state=https%3A%2F%2Fdeveloperrahul.graphy.com%7C%7C%7B%22source%22%3A%22landing_page%22%2C%22platform%22%3A%22web%22%2C%22sourceId%22%3Anull%7D%7C%7Cnull%7C%7Cnull%7C%7Cnull&service=lso&o2v=1&theme=glif"> <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"> Sign Up with Google</a></button>
+    <button onclick="signUpWithEmail()" class="email"><a href="https://mlx3lspc9ed5.i.optimole.com/cb:GgYV.35093/w:auto/h:auto/q:mauto/f:best/https://www.bluehost.com/blog/wp-content/uploads/2023/07/What-is-a-404-error-code.png" ><img src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png"> Sign Up with Email</a></button></div>
+</div>
+
+<script>
+    function openpopup2() {
+        document.getElementById('loginpopup2').style.display = 'block';
+    }
+
+    function closepopup2() {
+        document.getElementById('loginpopup2').style.display = 'none';
+    }
+
+    function signUpWithGoogle() {
+        // Add your Google sign-up logic here
+        alert('Sign up with Google');
+        closepopup2();
+    }
+
+    function signUpWithEmail() {
+        // Add your email sign-up logic here
+        alert('Sign up with Email');
+        closepopup2();
+    }
+</script>
+
+<!-----------WEBINAR ------------>
+<div class="webinar">
+    <div class="images">
+        <img src="https://i.ibb.co/QpXG9BP/webinar.jpg">
+        <h2>How to learn Full Stack Web Development</h2>
+    </div>
+    <div class="text">
+        <div class="box">
+            <h3>
+                How to learn Full Stack Web Development
+            </h3>
+            <p>
+                2 Nov 2023 1:00 PM to 1:30 PM
+            </p>
+            <p> Free</p>
+        </div>
+    </div>
+</div>
+<style>
+    .webinar{
+        display: flex;
+        margin: 5rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .webinar .images h2{
+        font-size: 1.3rem;
+    }
+    .webinar .images img{
+        width: 510px;
+    }
+    .webinar .text{
+        margin-left: 2rem;
+        border: 1rem;
+        color: #000000;
+    }
+    .webinar .text .box{
+        border-color: #000;
+        width: 30rem;
+    }
+    @media screen and (max-width: 768px) {
+        .webinar{
+            display: flex;
+            flex-direction: column;
+            margin: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .webinar .images{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .webinar .images h2{
+            font-size: 1rem;
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .webinar .images img{
+            width: 250px;
+        }
+        .webinar .text{
+            margin-top: 2rem;
+            border: 1rem;
+            color: #000000;
+        }
+        .webinar .text .box{
+            width: 18rem;
+            border-color: #000;
+        }
+    }
+
+</style>
+<script>
+    function toggleDiv(hiddenDiv2) {
+        var div = document.getElementById(hiddenDiv2);
+
+        // Hide all divs
+        var allDivs = document.getElementsByClassName('hiddenDiv');
+        for (var i = 0; i < allDivs.length; i++) {
+            allDivs[i].style.display = 'none';
+        }
+
+        // Show or hide the clicked div
+        if (div.style.display === 'none' || div.style.display === '') {
+            div.style.display = 'block';
+        } else {
+            div.style.display = 'none';
+        }
+    }
+    function hiddenDiv2() {
+        var div = document.getElementById('hiddenDiv2');
+        div.style.display = 'block';
+    }
+    function hiddenDiv3() {
+        var div = document.getElementById('hiddenDiv3');
+        div.style.display = 'block';
+    }
+    function autoHide(hiddenDiv2) {
+        var div = document.getElementById(hiddenDiv2);
+        div.style.display = 'none';
+    }
+</script>
+<!-----------Join us---------->
+
+<script>
+    const theBody = document.querySelector('body');
+const openNav = document.querySelector('.menu-bar button');
+const closeNav = document.querySelector('.close-nav button');
+const Navbar = document.querySelector('.navbar');
+
+// Hiding body scroll when mobile navigation menu opens
+function bodyScroll() {
+    if (Navbar.classList.contains('show')) {
+        theBody.classList.add('hide-scroll');
+    } else if (theBody.classList.contains('hide-scroll')) {
+        theBody.classList.remove('hide-scroll');
+    }
+}
+
+function showHide() {
+    Navbar.classList.toggle('show');
+    bodyScroll();
+}
+
+openNav.onclick = showHide;
+closeNav.onclick = showHide;
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const popupContainer = document.getElementById('popupContainer');
+        const popup = document.getElementById('popup');
+      
+        const messages = [
+          'Avinash registered 12 minutes ago, form Delhi',
+          'Vikki registered 30 minutes ago,from Bihar Begusarai',
+          'Aditiya Raj saini registered 15 minutes ago,from Bihar Begusarai',
+          'Abhishek Raj  registered 3 minutes ago,from Mumbai',
+          'Aryan Kumar registered 10 minutes ago,from Bihar Samastipur'
+        ];
+      
+        let currentIndex = 0;
+      
+        function showPopup() {
+          popup.textContent = messages[currentIndex];
+          popupContainer.style.display = 'block';
+      
+          setTimeout(function () {
+            popupContainer.style.display = 'none';
+            currentIndex = (currentIndex + 1) % messages.length;
+            setTimeout(showPopup, 10000); 
+          }, 5000); 
+        }
+      
+        showPopup();
+      });
+      
+</script>
+</body>
+</html>

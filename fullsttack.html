@@ -1,0 +1,1077 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/PROLANG-removebg-preview.png" type="lo.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer saurav</title>
+    <link rel="stylesheet" href="path/to/ionicons/css/ionicons.min.css">
+
+    <link rel="0stylesheet" href="style.css">
+<link rel="me" href="https://www.blogger.com/profile/18241178981162942797" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8389120514271140&host=ca-host-pub-1556223355139109" crossorigin="anonymous"></script>
+
+<!-- data-ad-client=ca-pub-8389120514271140 -->
+</head>
+<style>
+    
+*{
+    margin: 0;
+    padding: 0;
+}
+.conatiner2{
+    width: 100%;
+}
+.wrapper {
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    padding: 0px 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0 0 10px 10px;
+}
+.wrapper .logo img {
+    height: 70px;
+    display: block;
+}
+.wrapper .logo a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    transition: left 0.3s;
+}
+ .wrapper .login-btn{
+    width: 70px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(97, 97, 241);
+}
+.navbar.show {
+    left: 0 !important;
+}
+
+.hide-scroll {
+    overflow: hidden;
+}
+.navbar {
+    display: flex;
+}
+.navbar nav ul{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.navbar ul {
+    all: unset;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.navbar ul a {
+    all: unset;
+    color: rgb(94, 94, 223);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+}
+.navbar ul a:hover {
+    color: #111111;
+    text-decoration: underline overline;
+    text-decoration-thickness: 3px;
+}
+
+.close-nav {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.close-nav button {
+    all: unset;
+    background: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+    color: #444444;
+}
+.close-nav button:hover {
+    color: #222222;
+    background: white;
+}
+
+.menu-bar button {
+    border:none;
+    background: #fff;
+    height: 30px;
+    width: 40px;
+    padding: 2px 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.menu-bar i {
+    display: block;
+    border-top: 3px solid #444444;
+    border-bottom: 3px solid #444444;
+}
+.menu-bar i::after {
+    display: block;
+    content: "";
+    border-top: 3px solid #444444;
+    margin: 6px 0;
+}
+.menu-bar button:hover {
+    background: white;
+}
+.menu-bar button:hover i {
+    border-color: #222222;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+@media (min-width: 730px) {
+    .navbar {
+        all: unset;
+        display: block;
+        
+    }
+    .conatiner2 .wrapper .logo a{
+        font-size: 2px;
+    }
+    
+    .container .content1 img{
+        border-radius: 50%;
+        margin-left: 5rem;
+        width: 10px;
+    }
+    .navbar ul {
+        flex-direction: row;
+        gap: 20px;
+        
+    }
+    .navbar ul a {
+        font-size: inherit;
+        
+    }
+    .close-nav,
+    .menu-bar {
+        display: none;
+    }
+    
+}
+
+/*ndafk sbdfkjag shfahfhasfna bsjkf*/
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 90%;
+    left: 15%;
+    border-radius: 0 10px 10px 10px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(1, 1, 1);
+    padding: 20px;
+    color: #ccc;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    width: 200px;
+    
+  }
+  
+  .popup {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    .popup-container {
+        display: flex;
+        position: fixed;
+        top: 90%;
+        left: 35%;
+        border-radius: 0px 5px 5px 5px;
+        transform: translate(-50%, -50%);
+        background-color: rgb(1, 1, 1);
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        width: 205px;
+        color: #ccc;
+        font-size: 1rem;
+      }
+      .popup-container h2{
+        display: flex;
+        font-size: 15px;
+      }
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        background-color: rgba(138, 140, 141, 0.422);
+        height: 20rem;
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .notification{
+        font-size: 0.7rem;
+    }
+    .notification button{
+        font-weight: 200;
+    }
+}
+.footer{
+    background-color: rgba(138, 140, 141, 0.422);
+    height: auto;
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer button{
+    margin-top: 0.5rem;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+.footer h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+.footer h3{
+
+    margin-top: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.footer .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .image p{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer img{
+    width: 40px;
+    display: flex;
+    justify-content: space-between;
+    filter: contrast(0.5);
+    color: #000000;
+    margin-left: 1rem;
+}
+.footer a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+</style>
+<style>
+        
+    .popup2 .buttons{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .popup2 .buttons a{
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup2 {
+        display: none;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width: 20rem;
+        height: auto;
+    }
+    .popup2  .google{
+        margin-top: 1rem;
+        color: white;
+        background-color: #000000;
+        border: none;
+        height: 2rem;
+        width: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup2  .google img{
+        width: 25px;
+    }
+    .popup2  .email img{
+        width: 25px;
+    }
+    .popup2  .email{
+        margin-top: 1rem;
+        color: white;
+        background-color: rgb(91, 91, 236);
+        border: none;
+        height: 2rem;
+        width: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup2 button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        
+    }
+
+    .login-btn {
+        padding: 10px 20px;
+        background-color: #3498db;
+        
+        border: none;
+        cursor: pointer;
+    }
+    .notification{
+        background-color: #444444;
+        color: white;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .notification button{
+        border: none;
+        background-color: #444444;
+        color: #ccc;
+        font-weight: bolder;
+        font-size: 1rem;
+        margin-left: 1.5rem;
+    }
+    .notification span{
+        color: orangered;
+        margin-left: 0.5rem;
+    }
+    
+</style>
+<body>
+    <div id="loginpopup2" class="notification">
+        <p>Use discount code - CTDL25 and get upto 80% off  <span>BOOK NOW</span> <span class="close-btn" onclick="closepopup2()">X</span></p>
+    </div>
+    <script>
+        function closepopup2() {
+            // Get the notification element
+            var notification = document.getElementById('notification');
+    
+            // Hide the notification by setting its display property to 'none'
+            notification.style.display = 'none';
+        }
+    </script>
+        <div class="conatiner2">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="index.html"><img src="images/PROLANG-removebg-preview.png" alt="dev-saurav"> </a>
+            </div>
+            
+            <div class="navbar">
+                <div class="close-nav"><button>×</button></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="weball.html">Webinar</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="team.html">Team Member</a></li>
+
+                    </ul>
+                </nav>
+                
+            </div>
+            
+            <div class="menu-bar">
+                <button><i></i></button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <style>
+        
+    </style>
+
+    <!--------------------CENTER--------------->
+    
+    <script src="script.js"></script>
+
+      
+      
+<div id="loginpopup2" class="popup2">
+    <span class="close-btn" onclick="closepopup2()">X</span>
+    <div class="buttons">
+    <h2>Login To Developer Saurav</h2>
+    <button onclick="signUpWithGoogle()" class="google"><a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?redirect_uri=https%3A%2F%2Fauthenticate.ongraphy.com%2Ft%2Fpublic%2Fgoogle%2Fredirect&response_type=code%20id_token&scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&client_id=771122676243-cb11avd40vp8p9mblpks64a2efll2jou.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fauthenticate.ongraphy.com&fetch_basic_profile=true&gsiwebsdk=2&flowName=GeneralOAuthFlow&prompt=select_account&state=https%3A%2F%2Fdeveloperrahul.graphy.com%7C%7C%7B%22source%22%3A%22landing_page%22%2C%22platform%22%3A%22web%22%2C%22sourceId%22%3Anull%7D%7C%7Cnull%7C%7Cnull%7C%7Cnull&service=lso&o2v=1&theme=glif"> <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"> Sign Up with Google</a></button>
+    <button onclick="signUpWithEmail()" class="email"><a href="https://mlx3lspc9ed5.i.optimole.com/cb:GgYV.35093/w:auto/h:auto/q:mauto/f:best/https://www.bluehost.com/blog/wp-content/uploads/2023/07/What-is-a-404-error-code.png" ><img src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png"> Sign Up with Email</a></button></div>
+</div>
+
+<script>
+    function openpopup2() {
+        document.getElementById('loginpopup2').style.display = 'block';
+    }
+
+    function closepopup2() {
+        document.getElementById('loginpopup2').style.display = 'none';
+    }
+    
+
+    function signUpWithGoogle() {
+        // Add your Google sign-up logic here
+        alert('Sign up with Google');
+        closepopup2();
+    }
+
+    function signUpWithEmail() {
+        // Add your email sign-up logic here
+        alert('Sign up with Email');
+        closepopup2();
+    }
+</script>
+
+<style>
+    .course{
+        margin-top: 2rem;
+        margin-left: 4rem;
+        width: 250px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        border-radius: 2rem;
+        background-color: #9893932c;
+        box-shadow: 0px 0px 10px 10px rgb(255, 255, 255);
+    }
+    .course .back .text h2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+        color: rgb(96, 96, 246);
+    }
+    .course .back .text p{
+        color: #444444;
+    }
+    .course .back .text h3{
+        font-size: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .course .back .text{
+        margin-left: 1rem;
+    }
+    .course .back a{
+        text-decoration: none;
+    }
+    .course .back img{
+        width: 250px;
+        border-radius: 2rem 2rem 0 0;
+        filter: blur(0rem);
+    }
+    .contents{
+        display: flex;
+        margin: 3rem;
+    }
+    .contents .image img{
+        width: 400px;
+    }
+    .contents .text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contents .text h3{
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 1rem;
+        font-weight: 400;
+        
+    }
+    .contents .text{
+        margin-left: 1rem;
+    }
+    .contents .text p{
+        margin-top: 1rem;
+    }
+    .contents .text .all h3{
+        font-weight: bolder;
+    }
+    .contents .text .all h3 span{
+        text-decoration: line-through;
+    }
+    .contents .image a{
+        text-decoration: none;
+    }
+    .contents .image  button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        font-size: 1rem;
+        height: 3rem;
+        
+        width: 80%;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 2px 2px 15px 1px rgb(50, 49, 49);
+    }
+    .contents .image  button:hover{
+        margin-top: 1rem;
+        font-size: 1rem;
+        height: 3rem;
+        width: 80%;
+    }
+    .contents .image  button:hover{
+        border: none;
+        background-color: #3498db;
+    }
+    @media screen and (max-width: 768px) {
+        .introducing{
+            margin: 1rem;
+        }
+        .introducing p{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+        }
+        .introducing h1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3498db;
+        }
+        .contents{
+            display: flex;
+            margin: 1rem;
+        }
+        .contents .image img{
+            width: 150px;
+        }
+        
+        .contents .text h1{
+            font-size: 1rem;
+        }
+        
+        .contents .text  h3{
+            font-size: 1rem;
+        }
+        .contents .text .all  h3{
+            font-size: 0.7rem;
+        }
+        .contents .text .all  h4{
+            font-size: 0.7rem;
+        }
+        .contents .text .all p{
+            font-weight: 100;
+            font-size: 0.8rem;
+        }
+        .contents .image  button:hover{
+            border: none;
+            transition: 0.3s;
+            font-size: 10px;
+            height: 1.5rem;
+            width: 9rem;
+            background-color: #3498db;
+        }
+        .contents .image  button{
+            font-size: 10px;
+            height: 1.5rem;
+            width: 9rem;
+        }
+        .contents .image .ads{
+            width: 9rem;
+            height: 9rem;
+            margin-top: 1rem;
+        }
+        .contents .image .ads button {
+            color: black;
+            width: 3rem;
+            height: 0.8rem;
+            margin-top: 1rem;
+        }
+        
+    }
+    .contents .image .ads{
+        margin-top: 1rem;
+        border-radius: 20px;
+        height: 10rem;
+       background-color: #7d787849;
+    }
+    .contents .image .ads button{
+        margin: 0.5rem;
+        width: 5rem;
+        height: 1.8rem;
+     }
+</style>
+
+<!----------------------readmore ------------->
+<div class="contents">
+    <div class="image">
+        <img src="images/full stack.png">
+        <a href="#"><button>
+            CLICK HERE TO ENROLL
+        </button></a>
+        
+    </div>
+    <div class="text">
+        <h1>FULL STACK DEVELOPMENT</h1>
+        <h3>12+ Full Project Building Series + Learning Full Stack Skills <br>
+
+            Unleash Your Potential: Master Full Stack Development and Create Cutting-Edge Web Applications
+            
+            </h3>
+            <div class="all">
+            <p>✅Join Current Batch Now</p>
+            <p>✅Mega Project Building Live Sessions</p>
+            <p>✅ Mode of Teaching: Recordings + Zoom Sessions both</p>
+            <p>✅ Language: All lectures in both complete Hindi and complete English</p>
+            <p>✅ Recorded: 40+ Hours (Lifetime Access)</p>
+            <p>✅ Live Classes: 50+ Hours (Lifetime Access)</p>
+            <p>✅ Building 12 Real-World Projects</p>
+            <p>✅ Certificate upon completion</p>
+            <p>✅ 100+ Modern and Popular tools E-books & guidebooks</p>
+            <p>✅ PDF file with full stack development roadmap </p>
+            <p>✅ Paths for a step-by-step learning</p>
+            <h3>Actual Price - <span> ₹ 5,999</span> </h3>
+            <h4>OFFER PRICE - ₹ 1,999/-  </h4>
+        </div>
+            
+    </div>
+   
+</div>
+<!-----------------------end read more--------->
+<style>
+    .introducing{
+        margin: 1rem;
+    }
+    .introducing p{
+        margin-top: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+    }
+    .introducing h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #3498db;
+    }
+    .introducing a{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .introducing button{
+        width: 10rem;
+        height: 2.5rem;
+        border-radius: 20px;
+        background-color: #3498db;
+        border-color: #3498db;
+        box-shadow: 0px 5px 4px 0px rgb(74, 80, 81);
+
+    }
+    .introducing button:hover{
+        background-color: #3498db79;
+        border-color: #3498db79;
+        transition: 0.5s;
+    }
+</style>
+<!------------------Introdun=cing---------->
+<div class="introducing">
+    <h1>Introducing "Full Stack Development"</h1>
+    <p>This bundle includes 12 different full-stack web development projects, each of which will guide you through the process of building a real-world application from scratch. Whether you're a beginner or an experienced developer, these projects will help you gain hands-on experience with a wide range of programming languages, frameworks, and tools. Each project in the bundle includes detailed instructions, code samples, and resources to help you build the application step-by-step. You'll also learn how to use databases like MySQL, MongoDB, and Firebase to store and retrieve data from your applications.<br>
+
+        With this bundle, you'll not only learn how to build full-stack web applications, but you'll also have 12 different projects that you can add to your portfolio and showcase to potential employers.</p>
+        
+        <a href="#"><button>YES! I AM INTRESTED</button></a>
+</div>
+<!---------------End Introducing----------->
+<style>
+    .boxes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .boxes .boxall{
+        width: 20rem;
+        height: auto;
+        background-color: rgba(248, 215, 215, 0.527);
+        margin: 1rem;
+        border: 2px solid #285c81;
+        border-radius: 20px;
+    }
+    .boxes .boxall h2{
+        padding: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+    }
+    .boxes .boxall p{
+        padding: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.8rem;
+    }
+    .heading{
+        margin: 1rem;
+    }
+   
+</style>
+<!----------COLUMN-------->
+<div class="heading">
+    <h2>Why Should This Matter To You?</h2>
+</div>
+
+
+<div class="boxes">
+    
+    <div class="boxall">
+        
+        
+        
+        <h2>Comprehensive Curriculum:</h2>
+        <p>My course covers a wide range of essential topics, from the basics of HTML and CSS to advanced concepts like DevOps. You'll gain a holistic understanding of the entire web development process.</p>
+    </div>
+    <div class="boxall">
+        <h2>Practical Focus:</h2>
+        <p>I emphasize hands-on learning, guiding you through real-world projects and exercises that help you build practical skills. This approach ensures you're well-prepared to tackle real development challenges.</p>
+    </div>
+    <div class="boxall">
+        <h2>Modern Technologies:</h2>
+        <p>Learn the latest technologies and tools that are highly relevant in today's web development landscape. From Webpack for efficient module bundling to GSAP for stunning web animations, you'll be equipped with cutting-edge skills.</p>
+    </div>
+    <div class="boxall">
+        <h2>React and Node.js Mastery:</h2>
+        <p>Gain a deep understanding of React for building dynamic user interfaces and Node.js with Express.js for server-side development. These technologies are widely used in the industry and are valuable additions to your skill set.</p>
+    </div>
+    <div class="boxall">
+        <h2>Database Expertise:</h2>
+        <p>Learn to work with MongoDB, a popular NoSQL database, and discover how to effectively manage data in your applications.</p>
+    </div>
+    <div class="boxall">
+        <h2>Git Version Control:</h2>
+        <p>Master the essential skill of version control using Git, ensuring that your codebase remains organized, manageable, and collaborative.</p>
+    </div>
+    <div class="boxall">
+        <h2>DevOps Integration:</h2>
+        <p>Understand the DevOps principles and practices that streamline the development-to-deployment process. This knowledge is crucial for delivering high-quality software efficiently.</p>
+    </div>
+    <div class="boxall">
+        <h2>Career Opportunities:</h2>
+        <p>Full stack developers are in high demand as they can handle both frontend and backend tasks. Completing this course will open up diverse job opportunities in the rapidly evolving tech industry.</p>
+    </div>
+    <div class="boxall">
+        <h2>Personalized Support:</h2>
+        <p>I'm committed to your success. Throughout the course, you'll receive guidance and support to help you overcome challenges and excel in your learning journey.</p>
+    </div>
+    <div class="boxall">
+        <h2>Portfolio Building</h2>
+        <p>By completing projects and exercises, you'll have a collection of work to showcase in your portfolio, demonstrating your practical skills to potential employers or clients.</p>
+    </div>
+
+    
+</div>
+<div class="heading">
+    <h2>You'll Learn</h2>
+</div>
+<div class="boxes1">
+    <div class="boxsall">
+        
+<p>01
+Introduction to the Course</p>
+
+    </div>
+    <div class="boxsall">
+        <p>
+            02
+            Installing First Coding Editor
+        </p>
+    </div>
+
+    <div class="boxsall">
+        <p>
+            03
+        HTML AND CSS
+        </p>
+    </div>
+    <div class="boxsall">
+        <p>
+            04
+            Modern JavaScript 
+        </p>
+    </div>
+    <div class="boxsall">
+        <p>
+            05
+            React 
+        </p>
+    </div>
+    <div class="boxsall">
+        <p>
+            06
+        Webpack
+        </p>
+    </div>
+    <div class="boxsall">
+        <p>
+            07
+        Node.js & Express.js
+        </p>
+    </div>
+    <div class="boxsall">
+        <p>
+            08
+        MongoDB
+        </p>
+    </div>
+    <div class="boxsall">
+        <p>
+            09
+        Version control using Git
+        </p>
+    </div>
+    <div class="boxsall">
+        <p>
+            10
+        DevOps
+        </p>
+    </div>
+    <div class="boxsall">
+        <p>
+            11 
+        Projects
+        </p>
+    </div>
+    
+</div>
+<style>
+    .boxes1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .boxes1 .boxsall{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18rem;
+        height: 8rem;
+        height: auto;
+        background-color: rgba(248, 215, 215, 0.527);
+        margin: 1rem;
+        border: 2px solid #285c81;
+        border-radius: 20px;
+    }
+</style>
+<!-----------Join us---------->
+<div class="container2">
+    <div class="content2">
+        <h2>
+            About Me
+        </h2>
+        <h1>
+            Hello, I'm SAURAV, 
+        </h1>
+        <h3>
+            A dedicated Full Stack Developer with a passion for crafting exceptional digital experiences.
+        </h3>
+        <p>My journey in the world of technology has been an exciting one, and I thrive on turning innovative ideas into functional, user-friendly applications. With a diverse skill set and a commitment to excellence, I specialize in building efficient and versatile projects using a variety of programming languages and technologies. Here's a bit more about what I bring to the table:</p>
+    </div>
+    <div class="content3">
+        <img src="https://i.ibb.co/2KKdtZk/profile-pic.jpg">
+        <div class="text2">
+            <p>🚀 Flutter Enthusiast: I have a deep expertise in Flutter, which allows me to create stunning, natively compiled applications for mobile, web, and desktop from a single codebase. Flutter's flexibility and performance capabilities inspire me to push the boundaries of app development.<br>
+                <br> <br>💻 Full Stack Prowess: My skills aren't limited to one aspect of development. I thrive on both the front-end and back-end, ensuring that your project not only looks great but also functions flawlessly. Whether it's PHP, Python, JavaScript, or any other tech stack, I've got it covered.<br>
+                <br> <br>🌐 Cross-Platform and Cross-Browser Compatibility: I understand the importance of making your projects accessible to a wide audience. I take pride in my ability to create applications and websites that work seamlessly across various platforms and browsers, delivering a consistent user experience.<br>
+                <br> <br>🎨 UI/UX Design: Beyond just code, I have a keen eye for design. I believe that a beautiful, intuitive user interface is just as important as robust functionality. I pay meticulous attention to detail to ensure your project not only works well but also looks fantastic.</p>
+        </div>
+    </div>
+</div>
+<style>
+    .container2{
+        margin: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .container2 .content2 h2{
+        font-size: 30px;
+        font-weight: 100;
+        margin-top: 1rem;
+    }
+    .container2 .content2 h1{
+        margin-top: 1rem;
+        color: rgb(62, 62, 246);
+    }
+    .container2 .content2 h3{
+        margin-top: 1rem;
+        font-weight: 200;
+        color: rgb(62, 62, 246);
+    }
+    .container2 .content2 p{
+        font-size: 1rem;
+        font-weight: 100;
+        margin-top: 1rem;
+    }
+    .content3{
+        display: flex;
+        margin: 5rem;
+    }
+    @media screen and (max-width: 768px) {
+        .content3{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0rem;
+        } 
+        .container2 .content3 img{
+            width: 320px;
+            height: 320px;
+        }
+        .container2 .content3 .text2 {
+            display: flex;
+            margin-left: 0rem;
+            margin-top: 1rem;
+            font-weight: 100;
+            font-size: 1rem;
+            justify-content: space-between;
+        }
+        .container2{
+            margin: 1rem;
+        }
+        
+    }
+    .container2 .content3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container2 .content3 img{
+        width: 320px;
+        height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .content3 .text2 {
+        display: flex;
+        margin-left: 5rem;
+        font-weight: 100;
+        font-size: 1rem;
+        justify-content: space-between;
+    }
+</style>
+
+<div class="footer">
+    
+    <h3>Join Us</h3>
+    <div class="image">
+    <a href="https://www.instagram.com/pro_lang.in/?hl=en"><img src="https://dz8fbjd9gwp2s.cloudfront.net/orgData/64e08dd8e4b03f0cb2dc89f0/pages/assets/images/7PASNimage5.png"><p>Instagram</p> </a>
+    <a href="https://www.youtube.com/@codetodream"><img src="https://dz8fbjd9gwp2s.cloudfront.net/orgData/64e08dd8e4b03f0cb2dc89f0/pages/assets/images/gMYrUimage5.png"><p>Youtube</p></a>
+</div>
+    <p>100K+ creators trust Graphy to teach online</p>
+    <h2>Developer Saurav &#169; 2023</h2> 
+    <h2><a href=""> •Privacy policy </a>&nbsp;
+        <a href=""> •Terms of use </a>&nbsp;
+        <a href=""> •Contact us</a>&nbsp;
+        <a href=""> •Refund policy</a></h2> 
+</div>
+<script>
+    const theBody = document.querySelector('body');
+const openNav = document.querySelector('.menu-bar button');
+const closeNav = document.querySelector('.close-nav button');
+const Navbar = document.querySelector('.navbar');
+
+// Hiding body scroll when mobile navigation menu opens
+function bodyScroll() {
+    if (Navbar.classList.contains('show')) {
+        theBody.classList.add('hide-scroll');
+    } else if (theBody.classList.contains('hide-scroll')) {
+        theBody.classList.remove('hide-scroll');
+    }
+}
+
+function showHide() {
+    Navbar.classList.toggle('show');
+    bodyScroll();
+}
+
+openNav.onclick = showHide;
+closeNav.onclick = showHide;
+</script>
+
+</body>
+</html>

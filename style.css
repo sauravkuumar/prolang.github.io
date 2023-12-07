@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-family: 'Courier New', Courier, monospace;
+}
+.top a{
+    margin-right: 1rem;
+    text-decoration: none;
+    color: rgb(63, 61, 61);
+    font-family: 'Courier New', Courier, monospace;
+}
+.header{
+    display: flex;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+   background-color: rgba(228, 203, 252, 0.39);
+   font-family: 'Courier New', Courier, monospace;
+
+}
+.header .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .logo img{
+    width: 70px;
+    zoom: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: 8rem;
+}
+.header .navbar a{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    cursor: pointer;
+}
+.header .navbar button{
+    margin-left: 2rem;
+    width: 8rem;
+    border: none;
+    background-color: rgba(137, 43, 226, 0.445);
+    border-radius: 0.5rem;
+    color: black;
+    font-weight: bolder;
+    height: 2rem;
+    cursor: pointer;
+}
+.header .navbar button:hover{
+    background-color: rgba(137, 43, 226, 0.708);
+    transition: 0.5s;
+}
+
+#toggleBtn {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .navbar {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links {
+        float: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-links li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .header .logo {
+        width: 10%;
+        height: 20%;
+        zoom: 80%;
+        margin-left: 2.5rem;
+    }
+    .navbar {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    #toggleBtn {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .navbar.active a {
+        display: flex;
+    }
+    /* Add the following styles */
+
+/* Hamburger Icon Styles */
+#toggleBtn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dot {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.active .dot:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.active .dot:nth-child(2) {
+    opacity: 0;
+}
+
+.active .dot:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Rest of your existing styles... */
+
+}
